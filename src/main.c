@@ -133,13 +133,12 @@ char *itoa(int value, char *str, int base)
 	return str;
 }
 
-
-void main(void)
+int main(void)
 {
 	if (!device_is_ready(sl_uart1))
 	{
 		printk("uart devices not ready\n");
-		return;
+		return 0;;
 	}
 
 	// Configure the UART device
